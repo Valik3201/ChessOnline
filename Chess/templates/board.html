@@ -1,0 +1,19 @@
+ {% extends "base/base.html" %}
+ 
+ 
+ {% block content %}
+
+ <!-- start example HTML --->
+	<script src="/static/js/chess.js"></script>
+	<div id="board" style="width: 400px"></div>
+	<p>Status: <span id="status"></span></p>
+	<p>PGN: <span id="pgn"></span></p>
+    <input id="id" type="hidden" value="{{ user_profile.id }}" />
+
+<!-- end example HTML --->
+ <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/static/js/chessboard.js"></script>
+<script src="/static/js/game.js"></script>
+
+
+ {% endblock %}
