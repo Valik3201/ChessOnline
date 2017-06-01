@@ -80,11 +80,19 @@ def find_game(user_id,turn_id=1):
             if game['p1']['id']==user_id or game['p2']['id']==user_id:
                 return game
             else:
-                if turn_id == 10: return None
+                if turn_id == 10:
+                    cache.set("search_lock",True)
+                    cache.set("players", [])
+                    cache.set("search_lock", False)
+                    return None
                 sleep(2)
                 return find_game(user_id,turn_id=turn_id+1)
     else:
-        if turn_id == 10: return None
+        if turn_id == 10:
+            cache.set("search_lock", True)
+            cache.set("players", [])
+            cache.set("search_lock", False)
+            return None
         sleep(2)
         return find_game(user_id,turn_id=turn_id+1)
 

@@ -62,7 +62,10 @@ def create_games():
     players=cache.get('players')
     if players:
         if len(players)>1:
-            pairs=get_pair(players)
+            if len(players)%2==0:
+                pairs=get_pair(players)
+            else:
+                pairs=get_pair((players[1:]))
             for pair in pairs:
                 color=randint(1,2)
                 if color==1: white=pair[1]['id']
