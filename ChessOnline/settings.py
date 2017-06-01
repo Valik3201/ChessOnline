@@ -87,15 +87,15 @@ AUTH_USER_MODEL = 'Chess.User'
 
 DATABASES = {
     'default': {
-       # 'ENGINE': 'django.db.backends.sqlite3',
-     #   'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd97n9475cn88jr',
-        'USER' : 'rjklbnedpbyjup',
-        'PASSWORD' : '66ad9e30e78c6edd129eb8f9320e408e4d357ccd06854cc81a4bd44fc5d7552b',
-        'HOST' : 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com',
-        'PORT' : '5432',
+      #  'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      #  'NAME': 'd97n9475cn88jr',
+     #   'USER' : 'rjklbnedpbyjup',
+      #  'PASSWORD' : '66ad9e30e78c6edd129eb8f9320e408e4d357ccd06854cc81a4bd44fc5d7552b',
+       # 'HOST' : 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com',
+       # 'PORT' : '5432',
 
     }
 }
